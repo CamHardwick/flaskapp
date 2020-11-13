@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
-RUN apt-get update
-RUN apt-get upgrade
+RUN apt-get update && apt-get upgrade -y
+
 RUN apt-get -y install python3 python3-setuptools python3-pip gunicorn3
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 
